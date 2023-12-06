@@ -13,5 +13,9 @@ export function adicionaNaLista(novoItem){
 }
 
 export function removeDaLista(posicao){
-  lista.splice(posicao, posicao);
+  if(posicao >= 0 && posicao < lista.length) {
+    lista.splice(posicao, 1);
+  } else {
+    console.error("Invalid position");
+  }
 }
